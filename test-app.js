@@ -29,7 +29,7 @@ console.log(intro(name,age,hobbies));
 const person ={
   name:'dinesh',
   age:24,
-  greet: function() {
+  greet() {
     console.log('My name is ' + this.name);
   }
 };
