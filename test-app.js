@@ -12,5 +12,7 @@ const intro = (usrname,usrage,usrhobbies) => {
     ' and my hobby is ' + usrhobbies
   );
 }
+const add = (a,b) => a+b ;
+console.log(add(1,2));
 
 console.log(intro(name,age,hobbies));
