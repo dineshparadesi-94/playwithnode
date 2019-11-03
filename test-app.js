@@ -73,3 +73,11 @@ const toarrayn = (...args) => {
   return args;
 }
 console.log(toarrayn(1,3,2,5));
+/////////////////////////////////////////////////////////////////////////////////
+//destructuring
+
+const printname = (persondata) => {
+  console.log(persondata.name);
+}
+printname(person);
+//object destructuring
