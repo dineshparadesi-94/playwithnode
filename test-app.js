@@ -49,3 +49,7 @@ activities.push('Programming');
 
 const copyactvities = activities.slice();
 console.log(copyactvities);
+
+//spread operator
+const copied = [activities];
+console.log(copied);
