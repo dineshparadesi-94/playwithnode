@@ -43,4 +43,4 @@ for (let print of activities) {
   console.log(print);
 }
 
-console.log(activities.map(newact => return("The act is "+ activities));
+console.log(activities.map(newact => {"The act is "+ activities});
