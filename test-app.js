@@ -124,3 +124,8 @@ const fetchdata = () => {
   });
   return promise;
 };
+
+///literals
+const newname = "Max";
+const newage = 29;
+console.log(`My name is ${newname} and I am ${newage} years old.`);
