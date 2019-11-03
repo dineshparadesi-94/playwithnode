@@ -35,3 +35,10 @@ const person ={
 };
 console.log(person);
 person.greet();
+
+//Arrays and Methods
+
+const activities = ["Sports", "Dunebuggy", 21, true];
+for (let print of activities) {
+  console.log(print);
+}
