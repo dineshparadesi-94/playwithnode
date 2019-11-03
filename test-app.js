@@ -109,6 +109,10 @@ setTimeout(()=>{
   console.log('Time is up!');
   fetchdata().then(text =>{
     console.log(text);
+    return fetchdata();
+  })
+  .then(text2 => {
+    console.log(text2)
   });
 },2000);
 
