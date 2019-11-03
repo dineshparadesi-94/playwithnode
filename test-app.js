@@ -40,6 +40,10 @@ person.greet();
 
 const activities = ['Sports' , 'Dunebuggy'];
 activities.push('Programming');
+
+const [act1, act2] = activities;
+//can use let if change in the variable is required
+console.log(act1);
 //for (let print of activities) {
 //  console.log(print);
 //}
