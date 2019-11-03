@@ -38,9 +38,9 @@ person.greet();
 
 //Arrays and Methods
 
-const activities = ["Sports", "Dunebuggy", 21, true];
+const activities = ["Sports", "Dunebuggy"];
 for (let print of activities) {
   console.log(print);
 }
 
-console.log(activities.map(newact => "The act is "+ activities);
+console.log(activities.map(newact => "The act is "+ activities));
