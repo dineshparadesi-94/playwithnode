@@ -87,3 +87,15 @@ printname(person);
 //object destructuring
 const { name, age } = person;
 console.log(name,age);
+//////////////////////////////////////////////////////////////////////////////
+///ASync
+setTimeout(()=>{
+  console.log('Time is up!');
+  fetchdata(text =>{
+    console.log(text);
+  });
+},2000);
+
+const fetchdata = callback => {
+  setTimeout(() => {callback('done');},1500);
+}
