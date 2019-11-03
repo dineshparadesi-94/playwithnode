@@ -89,13 +89,34 @@ const { name, age } = person;
 console.log(name,age);
 //////////////////////////////////////////////////////////////////////////////
 ///ASync
+// setTimeout(()=>{
+//   console.log('Time is up!');
+//   fetchdata(text =>{
+//     console.log(text);
+//   });
+// },2000);
+//
+// const fetchdata = callback => {
+//   setTimeout(() => {callback('done');},1500);
+// }
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+//promises
+
 setTimeout(()=>{
   console.log('Time is up!');
-  fetchdata(text =>{
+  fetchdata().then(text =>{
     console.log(text);
   });
 },2000);
 
-const fetchdata = callback => {
-  setTimeout(() => {callback('done');},1500);
-}
+const fetchdata = () => {
+  const promise = new Promise((resolve,reject)=>{
+    setTimeout(() => {
+      resolve('done');
+    },1500);
+  });
+  return promise;
+};
