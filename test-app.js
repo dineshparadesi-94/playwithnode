@@ -53,3 +53,5 @@ console.log(copyactvities);
 //spread operator
 const copied = [activities];
 console.log(copied);
+const copiedwithspread = [...activities];
+console.log(copiedwithspread);
