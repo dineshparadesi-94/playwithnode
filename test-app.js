@@ -57,3 +57,19 @@ const copiedwithspread = [...activities];
 console.log(copiedwithspread);
 const copiedperson = {...person};
 console.log(copiedperson);
+
+//rest operator
+
+const toarray = (arg,arg1,arg2) => {
+  return([arg,arg1,arg2]);
+}
+
+console.log(toarray(1,2,3));
+
+//the above function is not flexible when a new argument is added to the function
+//so rest operator can help change it,
+
+const toarrayn = (...args) => {
+  return args;
+}
+console.log(toarrayn(1,3,2,5));
