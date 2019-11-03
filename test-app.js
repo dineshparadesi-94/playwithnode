@@ -55,3 +55,5 @@ const copied = [activities];
 console.log(copied);
 const copiedwithspread = [...activities];
 console.log(copiedwithspread);
+const copiedperson = {...person};
+console.log(copiedperson);
