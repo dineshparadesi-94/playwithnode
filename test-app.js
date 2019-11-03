@@ -38,10 +38,14 @@ person.greet();
 
 //Arrays and Methods
 
-const activities = ["Sports", "Dunebuggy"];
-activities.push("Programming");
-for (let print of activities) {
-  console.log(print);
-}
+const activities = ['Sports' , 'Dunebuggy'];
+activities.push('Programming');
+//for (let print of activities) {
+//  console.log(print);
+//}
 
-console.log(activities.map(newact => "The act is "+ activities));
+//console.log(activities.map(newact => "The act is "+ activities));
+
+
+const copyactvities = activities.slice();
+console.log(copyactvities);
