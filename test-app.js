@@ -42,3 +42,5 @@ const activities = ["Sports", "Dunebuggy", 21, true];
 for (let print of activities) {
   console.log(print);
 }
+
+console.log(activities.map(newact => return("The act is "+ activities));
