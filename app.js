@@ -22,8 +22,10 @@ if(url === '/message' && method === "POST"){
   req.on("end",()=> {
     const parsebody = Buffer.concat(body).toString(); // Works with text only
     console.log(parsebody);
+    const message =parsebody.split('=')[1];
+    fs.writeFileSync('message.txt',message);
   });
-fs.writeFileSync('message.txt','Hi There');
+
 res.statusCode = 302; // The status code is for redirectering url
 res.setHeader('Location','/');
 return res.end();
