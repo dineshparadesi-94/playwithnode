@@ -22,10 +22,13 @@ if(url === '/message' && method === "POST"){
     const parsebody = Buffer.concat(body).toString(); // Works with text only
     console.log(parsebody);
     const message =parsebody.split('=')[1];
-    fs.writeFileSync('message.txt',message);
-    res.statusCode = 302; // The status code is for redirectering url
-    res.setHeader('Location','/');
-    return res.end();
+    fs.writeFile('message.txt',message,err=> {
+      res.statusCode = 302; // The status code is for redirectering url
+      res.setHeader('Location','/');
+      return res.end();
+    });
+    //fs.writeFileSync('message.txt',message);// This is stop the next line untill executed
+
   });
 
 }
