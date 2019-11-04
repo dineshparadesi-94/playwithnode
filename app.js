@@ -14,6 +14,15 @@ if(url === '/'){
   return res.end();   //after res.end -> res.write should not be used so return :)
 }
 if(url === '/message' && method === "POST"){
+  const body = [];
+  req.on('data',(chunk)=>{
+    console.log(chunk);
+    body.push(chunk);
+  }); //event listening -> this case data event -> this is fired when a new chunk is ready
+  req.on("end",()=> {
+    const parsebody = Buffer.concat(body).toString(); // Works with text only
+    console.log(parsebody);
+  });
 fs.writeFileSync('message.txt','Hi There');
 res.statusCode = 302; // The status code is for redirectering url
 res.setHeader('Location','/');
