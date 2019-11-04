@@ -3,7 +3,6 @@ const fs = require('fs'); //file system
 const server = http.createServer((req,res) => {
 //console.log(req.url, req.method, req.headers);; //understanding requests
 //process.exit();
-
 const url =req.url;
 const method = req.method; // importing methods
 if(url === '/'){
@@ -19,16 +18,16 @@ if(url === '/message' && method === "POST"){
     console.log(chunk);
     body.push(chunk);
   }); //event listening -> this case data event -> this is fired when a new chunk is ready
-  req.on("end",()=> {
+  return req.on("end",()=> {
     const parsebody = Buffer.concat(body).toString(); // Works with text only
     console.log(parsebody);
     const message =parsebody.split('=')[1];
     fs.writeFileSync('message.txt',message);
+    res.statusCode = 302; // The status code is for redirectering url
+    res.setHeader('Location','/');
+    return res.end();
   });
 
-res.statusCode = 302; // The status code is for redirectering url
-res.setHeader('Location','/');
-return res.end();
 }
 res.setHeader('Content-Type','text/html');
 res.write('<html>');
