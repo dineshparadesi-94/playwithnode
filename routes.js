@@ -46,3 +46,6 @@ module.export = {
 
 // module.export.handler = requestHandler;
 // module.export.someText = 'hard Code';
+
+// export.handler = requestHandler;
+// export.someText = 'hard Code';
