@@ -43,3 +43,6 @@ module.export = {
                   handler:requestHandler,
                   someText : 'Hard coded text'
 };
+
+// module.export.handler = requestHandler;
+// module.export.someText = 'hard Code';
